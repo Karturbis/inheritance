@@ -20,18 +20,17 @@ public class Main {
 
             case "k":
                 Kangoroo kangoroo = new Kangoroo();
-                break;
 
             case "q":
                 System.exit(0);
 
             case "h":
                 System.out.println("");
-                break;
+
 
             default:
                 System.out.println("The input could not be processed, please try again.");
-                break;
+
             
         }
 
