@@ -1,4 +1,7 @@
-package inheritance.sourcecode;
+package inheritance;
+
+//import inheritance.*;
+
 public class Animal
 {
     protected int weight;

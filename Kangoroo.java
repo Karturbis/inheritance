@@ -1,4 +1,6 @@
-package inheritance.sourcecode;
+package inheritance;
+
+//import inheritance.*;
 
 public class Kangoroo extends Land_Animal
 {   

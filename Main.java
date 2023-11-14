@@ -1,13 +1,29 @@
-package inheritance.sourcecode;
+package inheritance;
+
+//import inheritance.*;
 import java.util.Scanner;
+
 
 public class Main {
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        System.out.println("Choose what you want to do,\nto create a new kangoroo, ernter 'k': ");
+        System.out.println("Choose what you want to do,your options are:\ncreate a new Kangoroo by entering 'k'\nor quit by entering 'q'");
 
         String option = input.nextLine();
+
+        switch (option) {
+            case "k":
+                
+                break;
+            case "q":
+                System.exit(0);
+            case "h":
+                System.out.println("");
+                break;
+            default:
+                break;
+        }
 
         if(option.toLowerCase().equals("k")){
 
