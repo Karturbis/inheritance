@@ -1,6 +1,5 @@
 package inheritance;
 
-//import inheritance.*;
 
 public class Land_Animal extends Animal
 {
