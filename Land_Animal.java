@@ -5,7 +5,7 @@ public class Land_Animal extends Animal
     
     protected void run()
     {
-        if (this.hunger >=100)
+        if (this.hunger <=100)
         {
             System.out.println(this.name + " ran!");
             this.hunger +=1;
