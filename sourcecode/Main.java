@@ -1,4 +1,4 @@
-package inheritance;
+package inheritance.sourcecode;
 import java.util.Scanner;
 
 public class Main {

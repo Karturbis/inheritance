@@ -1,4 +1,5 @@
-package inheritance;
+package inheritance.sourcecode;
+
 public class Kangoroo extends Land_Animal
 {   
     public Kangoroo(int weight, int age, String name)

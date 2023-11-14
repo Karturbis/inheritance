@@ -1,4 +1,5 @@
-package inheritance;
+package inheritance.sourcecode;
+
 public class Land_Animal extends Animal
 {
     protected int legs;

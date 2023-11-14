@@ -1,4 +1,4 @@
-package inheritance;
+package inheritance.sourcecode;
 public class Animal
 {
     protected int weight;
