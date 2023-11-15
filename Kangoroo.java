@@ -16,9 +16,6 @@ public class Kangoroo extends Land_Animal
 
         System.out.println("Please enter the weight of the kangoroo");
         this.weight = kangScanner.nextInt();
-        
-        kangScanner.close();
-
 
     this.legs = 2;
     this.hunger = 0;
