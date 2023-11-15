@@ -40,7 +40,7 @@ public class Main {
                         kangoroo.run();
                     }
                     else{
-                        System.out.print("You have to create a kangoroo first.");
+                        System.out.println("You have to create a kangoroo first.");
                     }
                     break;
 
