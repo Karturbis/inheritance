@@ -24,24 +24,29 @@ public class Main {
 
                 case "k":
                     kangoroo = new Kangoroo();
+                    break;
 
                 case "q":
                     System.exit(0);
+                    break;
 
                 case "h":
                     System.out.println("help");
+                    break;
 
                 case "r":
 
-                    if(kangoroo != null){
+                    if(kangoroo != null){ // checks if a kangoroo has been created
                         kangoroo.run();
                     }
                     else{
                         System.out.print("You have to create a kangoroo first.");
                     }
+                    break;
 
                 default:
                     System.out.println("The input could not be processed, please try again.");
+                    break;
 
             }
 
