@@ -12,9 +12,10 @@ public class Main {
 
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
+        commands.add("'k' to create a kangoroo");
         commands.add("'r' for run");
         commands.add("'q' to quit the program");
-        commands.add("'k' to create a kangoroo");
+
 
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
