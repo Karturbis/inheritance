@@ -15,6 +15,7 @@ public class Main {
         commands.add("'k' to create a kangoroo");
         commands.add("'r' to run");
         commands.add("'f' to feed");
+        commands.add("'p' to print out data");
         commands.add("'q' to quit the program");
 
 
@@ -60,6 +61,9 @@ public class Main {
                         System.out.println("You have to create a kangoroo first.");
                     }
                     break;
+
+                case "p":
+                    
 
                 case "":
                     break;
