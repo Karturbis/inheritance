@@ -45,12 +45,7 @@ public class Main {
                     break;
 
                 case "r":
-                    if(kangoroo != null){ // checks if a kangoroo has been created
-                        kangoroo.run();
-                    }
-                    else{
-                        System.out.println("You have to create a kangoroo first.");
-                    }
+                    kang_checker("run");
                     break;
 
                 case "f":
