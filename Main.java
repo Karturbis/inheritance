@@ -13,7 +13,8 @@ public class Main {
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
         commands.add("'k' to create a kangoroo");
-        commands.add("'r' for run");
+        commands.add("'r' to run");
+        commands.add("'f' to feed");
         commands.add("'q' to quit the program");
 
 
@@ -43,7 +44,6 @@ public class Main {
                     break;
 
                 case "r":
-
                     if(kangoroo != null){ // checks if a kangoroo has been created
                         kangoroo.run();
                     }
@@ -51,6 +51,11 @@ public class Main {
                         System.out.println("You have to create a kangoroo first.");
                     }
                     break;
+
+                case "f":
+                    if(kangoroo != null) {
+                        kangoroo.feed();
+                    }
 
                 case "":
                     break;
