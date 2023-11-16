@@ -11,10 +11,10 @@ public class Main {
         Kangoroo kangoroo = null;
 
         ArrayList<String> commands = new ArrayList<String>();
-        commands.add("h");
-        commands.add("r");
-        commands.add("q");
-        commands.add("k");
+        commands.add("'h' for help");
+        commands.add("'r' for run");
+        commands.add("'q' to quit the program");
+        commands.add("'k' to create a kangoroo");
 
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
@@ -38,7 +38,9 @@ public class Main {
                     break;
 
                 case "h":
-                    System.out.println("help");
+                    for(String i : commands) {
+                        System.out.println("You can press " + i);
+                    }
                     break;
 
                 case "r":
