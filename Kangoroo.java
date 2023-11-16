@@ -8,13 +8,13 @@ public class Kangoroo extends Land_Animal
 
         Scanner kangScanner = new Scanner(System.in);
 
-        System.out.print("Please enter the name of the kangoroo\n> ");
+        System.out.print("Please enter the name of the kangoroo\nk> ");
         this.name = kangScanner.nextLine();
 
-        System.out.print("Please enter the age of the kangoroo\n> ");
+        System.out.print("Please enter the age of the kangoroo\nk> ");
         this.age = kangScanner.nextInt();
 
-        System.out.print("Please enter the weight of the kangoroo\n> ");
+        System.out.print("Please enter the weight of the kangoroo\nk> ");
         this.weight = kangScanner.nextInt();
 
     this.legs = 2;
