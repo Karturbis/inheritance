@@ -52,6 +52,9 @@ public class Main {
                     }
                     break;
 
+                case "":
+                    break;
+
                 default:
                     System.out.println("The input could not be processed, please try again.");
                     break;
