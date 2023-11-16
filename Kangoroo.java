@@ -20,5 +20,5 @@ public class Kangoroo extends Land_Animal
     this.legs = 2;
     this.hunger = 0;
     }
-    
+    // the Scanner knagScanner is not closed on purpose, because otherwise, the scanner in Main.java would not work anymore.
 }
