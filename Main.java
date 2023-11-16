@@ -18,9 +18,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
-        System.out.print("Choose what you want to do,your options are:\ncreate a new Kangoroo by entering 'k'\nor quit by entering 'q'\n> ");
-
-        String option = input.nextLine(); // reads the input and saves it into option
+        String option = "h"; // sets the option to h in at the first run, to display all options
 
         
         
