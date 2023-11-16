@@ -23,14 +23,11 @@ public class Main {
 
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
-        String option = "h"; // sets the option to h in at the first run, to display all options
-
+        String[] optionStrings = {"h"}; // sets the option to h in at the first run, to display all options
         
-        
+        while (optionStrings[0].equals("q") == false) {
 
-        while (option.equals("q") == false) {
-
-            switch (option) {
+            switch (optionStrings[0]) {
 
                 case "k":
                 case "kangoroo":
@@ -93,7 +90,9 @@ public class Main {
             }
 
             System.out.print("> ");
-            option = input.nextLine().toLowerCase();
+            optionStrings = input.nextLine().toLowerCase().split(" ");
+
+            System.out.println(optionStrings);
             
         }
 
