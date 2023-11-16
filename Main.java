@@ -10,6 +10,8 @@ public class Main {
 
         Kangoroo kangoroo = null;
 
+        String ckf = "You have to create a kangoroo first."; // ckf stands for create knagoroo first
+
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
         commands.add("'k' to create a kangoroo");
@@ -45,7 +47,6 @@ public class Main {
                     break;
 
                 case "r":
-                    kang_checker("run");
                     break;
 
                 case "f":
@@ -53,7 +54,7 @@ public class Main {
                         kangoroo.feed();
                     }
                     else{
-                        System.out.println("You have to create a kangoroo first.");
+                        System.out.println(ckf);
                     }
                     break;
 
@@ -62,7 +63,7 @@ public class Main {
                         kangoroo.print_data();
                     }
                     else{
-                        System.out.println("You have to create a kangoroo first.");
+                        System.out.println(ckf);
                     }
                     break;
                     
