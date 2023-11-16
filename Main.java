@@ -33,20 +33,26 @@ public class Main {
             switch (option) {
 
                 case "k":
+                case "kangoroo":
                     kangoroo = new Kangoroo();
                     break;
 
                 case "q":
+                case "quit":
+                case "exit":
                     System.exit(0);
                     break;
 
                 case "h":
+                case "help":
+                case "?":
                     for(String i : commands) {
                         System.out.println("You can press " + i);
                     }
                     break;
 
                 case "r":
+                case "run":
                     if(kangoroo != null){
                         kangoroo.run();
                     }
@@ -56,6 +62,7 @@ public class Main {
                     break;
                     
                 case "f":
+                case "feed":
                     if(kangoroo != null){
                         kangoroo.feed();
                     }
@@ -65,6 +72,8 @@ public class Main {
                     break;
 
                 case "p":
+                case "print":
+                case "data":
                     if(kangoroo != null){
                         kangoroo.print_data();
                     }
