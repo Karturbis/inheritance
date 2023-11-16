@@ -1,5 +1,6 @@
 package inheritance;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -8,6 +9,12 @@ public class Main {
     public static void main(String[] args){
 
         Kangoroo kangoroo = null;
+
+        ArrayList<String> commands = new ArrayList<String>();
+        commands.add("h");
+        commands.add("r");
+        commands.add("q");
+        commands.add("k");
 
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
