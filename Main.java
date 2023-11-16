@@ -58,6 +58,13 @@ public class Main {
                     break;
 
                 case "p":
+                    if(kangoroo != null){
+                        kangoroo.print_data();
+                    }
+                    else{
+                        System.out.println("You have to create a kangoroo first.");
+                    }
+                    break;
                     
 
                 case "":
