@@ -9,12 +9,13 @@ public class Main {
     public static void main(String[] args){
 
         Kangoroo kangoroo = null;
+        Mantis mantis = null;
 
         String ckf = "You have to create a kangoroo first."; // ckf stands for create knagoroo first
 
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
-        commands.add("'k' to create a kangoroo");
+        commands.add("'n' to create a animal");
         commands.add("'r' to run");
         commands.add("'f' to feed");
         commands.add("'p' to print out data");
@@ -24,14 +25,15 @@ public class Main {
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
         String[] optionStrings = {"h"}; // sets the option to h in at the first run, to display all options
-        
+
         while (optionStrings[0].equals("q") == false) {
 
             switch (optionStrings[0]) {
 
-                case "k":
-                case "kangoroo":
-                    kangoroo = new Kangoroo();
+                case "n":
+                case "new":
+                case "animal":
+                    spawner(optionStrings[1]);
                     break;
 
                 case "q":
@@ -97,6 +99,17 @@ public class Main {
         }
 
         input.close();
+    }
+
+    public static void spawner(String species){
+        if(species.equals("kangoroo") || species.equals("kang") || species.equals("k")){
+            kangoroo = new Kangoroo();
+        }
+        else if(species.equals("mantis") || species.equals("m")){
+            mantis = new Mantis();
+
+        }
+
     }
 
 }
