@@ -8,7 +8,7 @@ public class Animal
     protected int hunger;    
 
     
-    public void eat()
+    public void feed()
     {
         this.hunger -=1;
         if (hunger < 0)
