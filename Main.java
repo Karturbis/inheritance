@@ -47,8 +47,14 @@ public class Main {
                     break;
 
                 case "r":
+                    if(kangoroo != null){
+                        kangoroo.run();
+                    }
+                    else{
+                        System.out.println(ckf);
+                    }
                     break;
-
+                    
                 case "f":
                     if(kangoroo != null){
                         kangoroo.feed();
