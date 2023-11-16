@@ -84,7 +84,7 @@ public class Main {
             }
 
             System.out.print("> ");
-            option = input.nextLine();
+            option = input.nextLine().toLowerCase();
             
         }
 
