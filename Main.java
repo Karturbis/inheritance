@@ -29,6 +29,7 @@ public class Main {
 
             switch (optionStrings[1]) {
 
+                case "m":
                 case "mantis":
                     switch (optionStrings[0]) {
                         case "n":
@@ -67,7 +68,9 @@ public class Main {
                     break;
 
 
+                case "k":
                 case "kang":
+                case "kangoroo":
                     switch (optionStrings[0]) {
                         case "n":
                         case "new":
