@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args){
 
         Kangoroo kangoroo = null;
-        Mantis mantis = null;
+        Mantis mantis = null;        
 
         String ckf = "You have to create a kangoroo first."; // ckf stands for create knagoroo first
 
@@ -33,7 +33,7 @@ public class Main {
                 case "n":
                 case "new":
                 case "animal":
-                    spawner(optionStrings[1]);
+                    spawner(optionStrings[1], kangoroo, mantis);
                     break;
 
                 case "q":
@@ -101,13 +101,20 @@ public class Main {
         input.close();
     }
 
-    public static void spawner(String species){
+    public static void spawner(String species, Kangoroo kangoroo, Mantis mantis){
+        
+        Scanner spawnScanner = new Scanner(System.in);
+        
         if(species.equals("kangoroo") || species.equals("kang") || species.equals("k")){
             kangoroo = new Kangoroo();
         }
         else if(species.equals("mantis") || species.equals("m")){
             mantis = new Mantis();
-
+        }
+        else{
+            System.out.println("Please type in the type of animal you want to create\n: ");
+            String input = spawnScanner.nextLine();
+            spawner(input, kangoroo, mantis);
         }
 
     }

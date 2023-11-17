@@ -1,6 +1,6 @@
-//package inheritance;
+package inheritance;
 
-import inheritance.*;
+//import inheritance.*;
 import java.util.Scanner;
 
 public class Mantis extends Land_Animal {
@@ -9,13 +9,13 @@ public class Mantis extends Land_Animal {
 
         Scanner mantScanner = new Scanner(System.in);
 
-        System.out.print("Please enter the name of the mantis\nk> ");
+        System.out.print("Please enter the name of the mantis\nm> ");
         this.name = mantScanner.nextLine();
 
-        System.out.print("Please enter the age of the mantis\nk> ");
+        System.out.print("Please enter the age of the mantis\nm> ");
         this.age = mantScanner.nextInt();
 
-        System.out.print("Please enter the weight of the mantis\nk> ");
+        System.out.print("Please enter the weight of the mantis\nm> ");
         this.weight = mantScanner.nextInt();
 
     this.legs = 6;
