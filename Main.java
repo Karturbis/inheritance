@@ -94,7 +94,7 @@ public class Main {
             System.out.print("> ");
             String[] optionStringstmp = input.nextLine().toLowerCase().split(" ");
             if(optionStringstmp.length < 2){
-                String[] x = {optionStringstmp[0], "mantis"}; // used help variable x, because curly brackets are only allowed on array initialisations.
+                String[] x = {optionStringstmp[0], "no_input_given"}; // used help variable x, because curly brackets are only allowed on array initialisations.
                 optionStrings = x;
             }
             
@@ -114,11 +114,10 @@ public class Main {
             mantis = new Mantis();
         }
         else{
-            System.out.println("Please try again, by specifying ether 'kangoroo' or 'mantis' behind the new option.");
+            System.out.println("Please specify ether 'kangoroo' or 'mantis'\n>");
             String input = spawnScanner.nextLine();
             spawner(input, kangoroo, mantis);
         }
-
     }
 
 }
