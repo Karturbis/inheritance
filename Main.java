@@ -57,23 +57,13 @@ public class Main {
                     
                 case "f":
                 case "feed":
-                    if(kangoroo != null){
-                        kangoroo.feed();
-                    }
-                    else{
-                        System.out.println(ckf);
-                    }
+                    feed(optionStrings[1], kangoroo, mantis);
                     break;
 
                 case "p":
                 case "print":
                 case "data":
-                    if(kangoroo != null){
-                        kangoroo.print_data();
-                    }
-                    else{
-                        System.out.println(ckf);
-                    }
+                    print(optionStrings[1], kangoroo, mantis);
                     break;
                     
 
@@ -123,7 +113,27 @@ public class Main {
         else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
            mantis.run();
         }
+    }
+
+    public static void feed(String species, Kangoroo kangoroo, Mantis mantis){
+
+        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
+           kangoroo.feed();
         }
+        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
+           mantis.feed();
+        }
+    }
+
+    public static void print(String species, Kangoroo kangoroo, Mantis mantis){
+
+        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
+           kangoroo.print_data();
+        }
+        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
+           mantis.print_data();
+        }
+    }
 
     public static String speciesfunc(String species, Kangoroo kangoroo, Mantis mantis){
         if((species.equals("kangoroo") || species.equals("kang") || species.equals("k")) && kangoroo != null){
@@ -135,8 +145,5 @@ public class Main {
         else{
             return "none";
         }
-
-
     }
-
 }
