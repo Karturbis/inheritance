@@ -9,7 +9,8 @@ public class Main {
     public static void main(String[] args){
 
         Kangoroo kangoroo = null;
-        Mantis mantis = null;        
+        Mantis mantis = null;
+        System.out.println(mantis); //dbugging
 
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
@@ -22,126 +23,118 @@ public class Main {
 
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
-        String[] optionStrings = {"h"}; // sets the first option to h at the first run, to display all options
+        String[] optionStrings = {"h", "none"}; // sets the first option to h at the first run, to display all options
 
         while (optionStrings[0].equals("q") == false) {
 
-            switch (optionStrings[0]) {
+            System.out.println(mantis + "MANTIIS"); //dbugging
 
-                case "n":
-                case "new":
-                case "animal":
-                    spawner(optionStrings[1], kangoroo, mantis);
-                    break;
+            switch (optionStrings[1]) {
 
-                case "q":
-                case "quit":
-                case "exit":
-                    System.exit(0);
-                    break;
+                case "mantis":
+                    switch (optionStrings[0]) {
+                        case "n":
+                        case "new":
+                        case "spawn":
+                            mantis = new Mantis();
+                            break;
+                        case "r":
+                        case "run":
+                            mantis.run();
+                            break;
+                        
+                        case "f":
+                        case "feed":
+                            mantis.feed();
+                            break;
 
-                case "h":
-                case "help":
-                case "?":
-                    for(String i : commands) {
-                        System.out.println("You can enter " + i);
+                        case "p":
+                        case "print":
+                        case "data":
+                            mantis.print_data();
+                            break;
+
+                        case "":
+                            break;
+
+                        default:
+                            System.out.println("The input could not be processed, enter 'h' for help.");
+                            break;
                     }
                     break;
 
-                case "r":
-                case "run":
-                    run(optionStrings[1], kangoroo, mantis);
-                    break;
-                    
-                case "f":
-                case "feed":
-                    feed(optionStrings[1], kangoroo, mantis);
+
+                case "kang":
+                    switch (optionStrings[0]) {
+                        case "n":
+                        case "new":
+                        case "spawn":
+                            kangoroo = new Kangoroo();
+                            break;
+                        case "r":
+                        case "run":
+                            kangoroo.run();
+                            break;
+                        
+                        case "f":
+                        case "feed":
+                            kangoroo.feed();
+                            break;
+
+                        case "p":
+                        case "print":
+                        case "data":
+                            kangoroo.print_data();
+                            break;
+
+                        case "":
+                            break;
+
+                        default:
+                            System.out.println("The input could not be processed, enter 'h' for help.");
+                            break;
+                    }
                     break;
 
-                case "p":
-                case "print":
-                case "data":
-                    print(optionStrings[1], kangoroo, mantis);
-                    break;
-                    
+                    case "none":
+                        switch (optionStrings[0]) {
+                            
+                            case "q":
+                            case "quit":
+                            case "exit":
+                                System.exit(0);
+                                break;
 
-                case "":
-                    break;
+                            case "h":
+                            case "help":
+                            case "?":
+                                for(String i : commands) {
+                                    System.out.println("You can enter " + i);
+                                }
+                                break;
 
-                default:
-                    System.out.println("The input could not be processed, enter 'h' for help.");
-                    break;
+                            case "":
+                                break;
 
+                            default:
+                                System.out.println("The input could not be processed, enter 'h' for help.");
+                                break;
+                        }
+
+            
             }
 
-            System.out.print("> ");
+            System.out.print(">> ");
             String[] optionStringstmp = input.nextLine().toLowerCase().split(" ");
             if(optionStringstmp.length < 2){
-                String[] x = {optionStringstmp[0], "no_input_given"}; // used help variable x, because curly brackets are only allowed on array initialisations.
+                String[] x = {optionStringstmp[0], "none"}; // used help variable x, because curly brackets are only allowed on array initialisations.
                 optionStrings = x;
             }
-            
+            else{
+                optionStrings = optionStringstmp;
+            }
         }
 
         input.close();
-    }
-
-    public static void spawner(String species, Kangoroo kangoroo, Mantis mantis){
-        
-        Scanner spawnScanner = new Scanner(System.in);
-        
-        if(speciesfunc(species).equals("kang")){
-            kangoroo = new Kangoroo();
-        }
-        else if(speciesfunc(species).equals("mantis")){
-            mantis = new Mantis();
-        }
-        else{
-            System.out.print("Please specify ether 'kangoroo' or 'mantis'\n>");
-            String input = spawnScanner.nextLine().toLowerCase();
-            spawner(input, kangoroo, mantis);
-        }
-    }
-
-    public static void run(String species, Kangoroo kangoroo, Mantis mantis){
-
-        if(speciesfunc(species).equals("kang")  && kangoroo != null){
-           kangoroo.run();
-        }
-        else if(speciesfunc(species).equals("mantis") && mantis != null){
-           mantis.run();
-        }
-    }
-
-    public static void feed(String species, Kangoroo kangoroo, Mantis mantis){
-
-        if(speciesfunc(species).equals("kang")  && kangoroo != null){
-           kangoroo.feed();
-        }
-        else if(speciesfunc(species).equals("mantis") && mantis != null){
-           mantis.feed();
-        }
-    }
-
-    public static void print(String species, Kangoroo kangoroo, Mantis mantis){
-
-        if(speciesfunc(species).equals("kang")  && kangoroo != null){
-           kangoroo.print_data();
-        }
-        else if(speciesfunc(species).equals("mantis") && mantis != null){
-           mantis.print_data();
-        }
-    }
-
-    public static String speciesfunc(String species){
-        if(species.equals("kangoroo") || species.equals("kang") || species.equals("k")){
-            return "kang";
-        }
-        else if(species.equals("mantis") || species.equals("m")){
-            return "mantis";
-        }
-        else{
-            return "none";
-        }
     }
 }
