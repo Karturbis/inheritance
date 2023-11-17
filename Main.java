@@ -44,7 +44,7 @@ public class Main {
                 case "help":
                 case "?":
                     for(String i : commands) {
-                        System.out.println("You can press " + i);
+                        System.out.println("You can enter " + i);
                     }
                     break;
 
