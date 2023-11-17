@@ -10,11 +10,12 @@ public class Main {
 
         Kangoroo kangoroo = null;
         Mantis mantis = null;
-        
+
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
         commands.add("'n' to create a animal");
         commands.add("'r' to run");
+        commands.add("'j' to jump");
         commands.add("'f' to feed");
         commands.add("'p' to print out data");
         commands.add("'q' to quit the program");
@@ -38,6 +39,11 @@ public class Main {
                         case "r":
                         case "run":
                             mantis.run();
+                            break;
+                        
+                        case "j":
+                        case "jump":
+                            mantis.jump();
                             break;
                         
                         case "f":
@@ -71,6 +77,11 @@ public class Main {
                         case "r":
                         case "run":
                             kangoroo.run();
+                            break;
+
+                        case "j":
+                        case "jump":
+                            kangoroo.jump();
                             break;
                         
                         case "f":
