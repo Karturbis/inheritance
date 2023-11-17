@@ -21,5 +21,5 @@ public class Mantis extends Land_Animal {
     this.legs = 6;
     this.hunger = 0;
     }
-    
+    // the Scanner mantScanner is not closed on purpose, because otherwise, the scanner in Main.java would not work anymore.
 }
