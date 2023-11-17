@@ -11,8 +11,6 @@ public class Main {
         Kangoroo kangoroo = null;
         Mantis mantis = null;        
 
-        String ckf = "You have to create a kangoroo first."; // ckf stands for create knagoroo first
-
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
         commands.add("'n' to create a animal");
@@ -107,39 +105,39 @@ public class Main {
 
     public static void run(String species, Kangoroo kangoroo, Mantis mantis){
 
-        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
+        if(speciesfunc(species).equals("kang")  && kangoroo != null){
            kangoroo.run();
         }
-        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
+        else if(speciesfunc(species).equals("mantis") && mantis != null){
            mantis.run();
         }
     }
 
     public static void feed(String species, Kangoroo kangoroo, Mantis mantis){
 
-        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
+        if(speciesfunc(species).equals("kang")  && kangoroo != null){
            kangoroo.feed();
         }
-        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
+        else if(speciesfunc(species).equals("mantis" && mantis != null)){
            mantis.feed();
         }
     }
 
     public static void print(String species, Kangoroo kangoroo, Mantis mantis){
 
-        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
+        if(speciesfunc(species).equals("kang")  && kangoroo != null){
            kangoroo.print_data();
         }
-        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
+        else if(speciesfunc(species).equals("mantis") && mantis != null){
            mantis.print_data();
         }
     }
 
-    public static String speciesfunc(String species, Kangoroo kangoroo, Mantis mantis){
-        if((species.equals("kangoroo") || species.equals("kang") || species.equals("k")) && kangoroo != null){
+    public static String speciesfunc(String species){
+        if(species.equals("kangoroo") || species.equals("kang") || species.equals("k")){
             return "kang";
         }
-        else if((species.equals("mantis") || species.equals("m")) && mantis != null){
+        else if(species.equals("mantis") || species.equals("m")){
             return "mantis";
         }
         else{
