@@ -10,8 +10,7 @@ public class Main {
 
         Kangoroo kangoroo = null;
         Mantis mantis = null;
-        System.out.println(mantis); //dbugging
-
+        
         ArrayList<String> commands = new ArrayList<String>();
         commands.add("'h' for help");
         commands.add("'n' to create a animal");
@@ -26,8 +25,6 @@ public class Main {
         String[] optionStrings = {"h", "none"}; // sets the first option to h at the first run, to display all options
 
         while (optionStrings[0].equals("q") == false) {
-
-            System.out.println(mantis + "MANTIIS"); //dbugging
 
             switch (optionStrings[1]) {
 
