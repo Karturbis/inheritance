@@ -52,12 +52,7 @@ public class Main {
 
                 case "r":
                 case "run":
-                    if(kangoroo != null){
-                        kangoroo.run();
-                    }
-                    else{
-                        System.out.println(ckf);
-                    }
+                    run(optionStrings[1], kangoroo, mantis);
                     break;
                     
                 case "f":
@@ -107,10 +102,10 @@ public class Main {
         
         Scanner spawnScanner = new Scanner(System.in);
         
-        if(species(species).equals("kang")){
+        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
             kangoroo = new Kangoroo();
         }
-        else if(species(species).equals("mantis")){
+        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
             mantis = new Mantis();
         }
         else{
@@ -120,11 +115,21 @@ public class Main {
         }
     }
 
-    public static String species(String species){
-        if(species.equals("kangoroo") || species.equals("kang") || species.equals("k")){
+    public static void run(String species, Kangoroo kangoroo, Mantis mantis){
+
+        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
+           kangoroo.run();
+        }
+        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
+           mantis.run();
+        }
+        }
+
+    public static String speciesfunc(String species, Kangoroo kangoroo, Mantis mantis){
+        if((species.equals("kangoroo") || species.equals("kang") || species.equals("k")) && kangoroo != null){
             return "kang";
         }
-        else if(species.equals("mantis") || species.equals("m")){
+        else if((species.equals("mantis") || species.equals("m")) && mantis != null){
             return "mantis";
         }
         else{
