@@ -107,10 +107,10 @@ public class Main {
         
         Scanner spawnScanner = new Scanner(System.in);
         
-        if(species.equals("kangoroo") || species.equals("kang") || species.equals("k")){
+        if(species(species).equals("kang")){
             kangoroo = new Kangoroo();
         }
-        else if(species.equals("mantis") || species.equals("m")){
+        else if(species(species).equals("mantis")){
             mantis = new Mantis();
         }
         else{
@@ -118,6 +118,20 @@ public class Main {
             String input = spawnScanner.nextLine().toLowerCase();
             spawner(input, kangoroo, mantis);
         }
+    }
+
+    public static String species(String species){
+        if(species.equals("kangoroo") || species.equals("kang") || species.equals("k")){
+            return "kang";
+        }
+        else if(species.equals("mantis") || species.equals("m")){
+            return "mantis";
+        }
+        else{
+            return "none";
+        }
+
+
     }
 
 }
