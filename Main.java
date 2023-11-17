@@ -118,7 +118,7 @@ public class Main {
         if(speciesfunc(species).equals("kang")  && kangoroo != null){
            kangoroo.feed();
         }
-        else if(speciesfunc(species).equals("mantis" && mantis != null)){
+        else if(speciesfunc(species).equals("mantis") && mantis != null){
            mantis.feed();
         }
     }
