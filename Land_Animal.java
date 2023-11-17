@@ -20,7 +20,7 @@ public class Land_Animal extends Animal
     
     public void jump()
     {
-        if (this.hunger >=100)
+        if (this.hunger <=100)
         {
             System.out.println(this.name + " jumped!");
             this.hunger +=2;
