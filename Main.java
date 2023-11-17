@@ -42,23 +42,43 @@ public class Main {
                             break;
                         case "r":
                         case "run":
-                            mantis.run();
+                            if(mantis != null){
+                                mantis.run();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a mantis first.");
+                            }
                             break;
                         
                         case "j":
                         case "jump":
-                            mantis.jump();
+                            if(mantis != null){
+                                mantis.jump();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a mantis first.");
+                            }
                             break;
                         
                         case "f":
                         case "feed":
-                            mantis.feed();
+                            if(mantis != null){
+                                mantis.feed();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a mantis first.");
+                            }
                             break;
 
                         case "p":
                         case "print":
                         case "data":
-                            mantis.print_data();
+                            if(mantis != null){
+                                mantis.print_data();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a mantis first.");
+                            }
                             break;
 
                         case "":
@@ -82,23 +102,43 @@ public class Main {
                             break;
                         case "r":
                         case "run":
-                            kangoroo.run();
+                            if(kangoroo != null){
+                                kangoroo.run();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a kangoroo first.");
+                            }
                             break;
 
                         case "j":
                         case "jump":
-                            kangoroo.jump();
+                            if(kangoroo != null){
+                                kangoroo.jump();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a kangoroo first.");
+                            }
                             break;
                         
                         case "f":
                         case "feed":
-                            kangoroo.feed();
+                            if(kangoroo != null){
+                                kangoroo.feed();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a kangoroo first.");
+                            }
                             break;
 
                         case "p":
                         case "print":
                         case "data":
-                            kangoroo.print_data();
+                            if(kangoroo != null){
+                                kangoroo.print_data();
+                            }
+                            else{
+                                System.out.println("Please use 'new' command to create a kangoroo first.");
+                            }
                             break;
 
                         case "":
