@@ -24,7 +24,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in); // opens a scanner so console input can be read.
 
-        String[] optionStrings = {"h"}; // sets the option to h in at the first run, to display all options
+        String[] optionStrings = {"h"}; // sets the first option to h at the first run, to display all options
 
         while (optionStrings[0].equals("q") == false) {
 
@@ -86,15 +86,17 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("The input could not be processed, please try again.");
+                    System.out.println("The input could not be processed, enter 'h' for help.");
                     break;
 
             }
 
             System.out.print("> ");
-            optionStrings = input.nextLine().toLowerCase().split(" ");
-
-            System.out.println(optionStrings);
+            String[] optionStringstmp = input.nextLine().toLowerCase().split(" ");
+            if(optionStringstmp.length < 2){
+                String[] x = {optionStringstmp[0], "mantis"}; // used help variable x, because curly brackets are only allowed on array initialisations.
+                optionStrings = x;
+            }
             
         }
 
@@ -112,7 +114,7 @@ public class Main {
             mantis = new Mantis();
         }
         else{
-            System.out.println("Please type in the type of animal you want to create\n: ");
+            System.out.println("Please try again, by specifying ether 'kangoroo' or 'mantis' behind the new option.");
             String input = spawnScanner.nextLine();
             spawner(input, kangoroo, mantis);
         }
