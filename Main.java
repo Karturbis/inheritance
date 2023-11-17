@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
+        
+        System.out.println("This program is written by Karturbis, visit 'https://github.com/karturbis/inheritance'\nfor more info.");
+        System.out.println("This is the first working version of the programm, please note, if you create a new animal,\nall animals of the same type will be deleted.");
 
         Kangoroo kangoroo = null;
         Mantis mantis = null;
