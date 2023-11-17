@@ -114,8 +114,8 @@ public class Main {
             mantis = new Mantis();
         }
         else{
-            System.out.println("Please specify ether 'kangoroo' or 'mantis'\n>");
-            String input = spawnScanner.nextLine();
+            System.out.print("Please specify ether 'kangoroo' or 'mantis'\n>");
+            String input = spawnScanner.nextLine().toLowerCase();
             spawner(input, kangoroo, mantis);
         }
     }
