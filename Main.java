@@ -90,10 +90,10 @@ public class Main {
         
         Scanner spawnScanner = new Scanner(System.in);
         
-        if(speciesfunc(species, kangoroo, mantis).equals("kang")){
+        if(speciesfunc(species).equals("kang")){
             kangoroo = new Kangoroo();
         }
-        else if(speciesfunc(species, kangoroo, mantis).equals("mantis")){
+        else if(speciesfunc(species).equals("mantis")){
             mantis = new Mantis();
         }
         else{
